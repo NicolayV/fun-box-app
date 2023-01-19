@@ -1,0 +1,13 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    padding-top: 36px;
+    font-family: "Exo 2.0- Thin", sans-serif;
+    font-size: var(--fs-36);
+    line-height: 44px;
+    color: var(--white100);
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,19 @@
+.cardList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "item0 item1 item2";
+  gap: 80px;
+  padding: 24px 0;
+
+  @media (max-width: 1280px) {
+    grid-template-areas:
+      ". item0 ."
+      "item1 . item2";
+  }
+  @media (max-width: 1160px) {
+    grid-template-areas:
+      ". item0 ."
+      ". item1 ."
+      ". item2 .";
+  }
+}

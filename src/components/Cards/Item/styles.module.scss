@@ -1,0 +1,171 @@
+@supports (clip-path: polygon(40px 0, 100% 0, 100% 100%, 0 100%, 0 40px)) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 320px;
+    height: 480px;
+    border: 4px solid var(--blue300);
+    border-radius: 15px;
+    background: var(--white200);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%, 0 10%);
+    &::before {
+      content: "";
+      border-top: 4px solid var(--blue300);
+      position: absolute;
+      width: 70px;
+      transform: rotate(-45deg);
+      height: 0px;
+      top: 18px;
+      left: -13px;
+      color: var(--white200);
+    }
+  }
+  .cardSelected {
+    border-color: var(--pink100);
+    &::before {
+      border-top-color: var(--pink100);
+    }
+  }
+  .cardDisabled {
+    cursor: not-allowed;
+    border-color: var(--grey200);
+    & > img {
+      opacity: 0.3;
+    }
+    &::before {
+      border-color: var(--grey200);
+    }
+  }
+  .cardPanel {
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+  }
+  .cardPanelDisabled {
+    color: var(--grey200);
+    p,
+    p > span,
+    h3,
+    h6 {
+      color: var(--grey200);
+    }
+  }
+  .headerLabel {
+    background: transparent;
+    padding-top: 21px;
+
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: var(--fs-16);
+    font-weight: var(--fw-normal);
+    color: var(--grey300);
+    span {
+      background: inherit;
+      color: var(--pink100);
+    }
+  }
+  .title,
+  .subTitle {
+    background: transparent;
+    padding-top: 5px;
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: var(--fs-48);
+    font-weight: var(--fw-medium);
+    margin: 0 5px 0 5px;
+  }
+  .subTitle {
+    font-size: var(--fs-24);
+  }
+  .servings {
+    padding-top: 15px;
+  }
+  .servings,
+  .servings span,
+  .gifts span,
+  .gifts {
+    background: transparent;
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: var(--fs-14);
+    font-weight: var(--fw-normal);
+    color: var(--grey300);
+  }
+  .servings span {
+    font-weight: var(--fw-bold);
+  }
+  .gifts :first-child {
+    font-weight: var(--fw-bold);
+  }
+  .img {
+    border-radius: 15px;
+    background: none;
+    position: relative;
+    bottom: -20px;
+    left: 0px;
+  }
+  .weightPanel {
+    width: 86px;
+    height: 86px;
+    border-radius: 50%;
+    color: var(--white100);
+    background: var(--blue300);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+
+    span {
+      position: relative;
+      bottom: -2px;
+      font-family: "Trebuchet MS", sans-serif;
+      font-weight: var(--fw-normal);
+      background: none;
+      line-height: 0.9;
+    }
+    :first-child {
+      font-size: var(--fs-42);
+    }
+    :last-child {
+      font-size: var(--fs-22);
+    }
+  }
+  .weightPanelSelected {
+    background: var(--pink100);
+  }
+  .weightPanelDisabled {
+    background: var(--grey200);
+  }
+  .footerLabel > p {
+    background: transparent;
+    color: var(--white100);
+    padding-top: 14px;
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: var(--fs-13);
+  }
+}
+.footerLabelEmpty > span {
+  color: var(--yellow100);
+  font-size: var(--fs-13);
+  font-weight: var(--fw-normal);
+}
+.displayNone {
+  display: none;
+}
+.item0 {
+  grid-area: item0;
+}
+.item1 {
+  grid-area: item1;
+}
+.item2 {
+  grid-area: item2;
+}
